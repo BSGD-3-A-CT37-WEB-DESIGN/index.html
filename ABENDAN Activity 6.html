@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACRL Login</title>
+
+<style>
+
+/* GENERAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#67c6ff,#8ed8ff,#b8ebff);
+}
+
+/* BUBBLE EFFECTS */
+
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.2);
+    animation:float 10s infinite ease-in-out;
+}
+
+.b1{
+    width:220px;
+    height:220px;
+    top:-70px;
+    left:-70px;
+}
+
+.b2{
+    width:170px;
+    height:170px;
+    bottom:-50px;
+    right:-50px;
+    animation-delay:2s;
+}
+
+.b3{
+    width:120px;
+    height:120px;
+    left:10%;
+    bottom:15%;
+    animation-delay:4s;
+}
+
+.b4{
+    width:100px;
+    height:100px;
+    top:20%;
+    right:15%;
+    animation-delay:6s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(20px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* LOGIN BOX */
+
+.login-box{
+    width:360px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(14px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:fadeIn 1s ease;
+}
+
+/* LOGO */
+
+.logo{
+    font-size:72px;
+    font-weight:900;
+    color:white;
+    font-family:cursive;
+    letter-spacing:6px;
+    margin-bottom:10px;
+    text-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* SUBTITLE */
+
+.subtitle{
+    color:white;
+    margin-bottom:30px;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+/* INPUTS */
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    outline:none;
+    background:rgba(255,255,255,0.75);
+    font-size:15px;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:white;
+    color:#3498db;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    transform:scale(1.03);
+    background:#e9f8ff;
+}
+
+/* ERROR MESSAGE */
+
+.error{
+    margin-top:12px;
+    color:white;
+    display:none;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BUBBLES -->
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
+
+<!-- LOGIN BOX -->
+
+<div class="login-box">
+
+    <div class="logo">
+        ACRL
+    </div>
+
+    <div class="subtitle">
+        COOL ACTIVITY PORTAL
+    </div>
+
+    <div class="input-box">
+        <input type="text" id="username" placeholder="Username">
+    </div>
+
+    <div class="input-box">
+        <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <button class="login-btn" onclick="login()">
+        LOGIN
+    </button>
+
+    <div class="error" id="error">
+        Please fill in all fields
+    </div>
+
+</div>
+
+<script>
+
+function login(){
+
+    const username =
+    document.getElementById('username').value;
+
+    const password =
+    document.getElementById('password').value;
+
+    if(username === '' || password === ''){
+
+        document.getElementById('error')
+        .style.display = 'block';
+
+        return;
+    }
+
+    alert("Login Successful!");
+
+}
+
+</script>
+
+</body>
+</html>

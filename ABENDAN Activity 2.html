@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famous Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Uber */
+    .uber-btn {
+      background-color: black;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Amazon */
+    .amazon-btn {
+      background-color: rgb(255, 216, 20);
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* GitHub */
+    .github-btn {
+      background-color: rgb(46, 164, 79);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Bootstrap */
+    .bootstrap-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .bootstrap-primary {
+      background-color: rgb(121, 82, 179);
+      color: white;
+    }
+    .bootstrap-secondary {
+      background-color: rgb(108, 117, 125);
+      color: black;
+    }
+
+    /* LinkedIn */
+    .linkedin-btn {
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .linkedin-primary {
+      background-color: rgb(10, 102, 194);
+      color: white;
+      border: none;
+    }
+    .linkedin-secondary {
+      background-color: white;
+      color: rgb(10, 102, 194);
+      border: 2px solid rgb(10, 102, 194);
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="uber-btn">Request now</button>
+    <button class="amazon-btn">Add to Cart</button>
+    <button class="github-btn">Sign up</button>
+    <button class="bootstrap-btn bootstrap-primary">Get started</button>
+    <button class="bootstrap-btn bootstrap-secondary">Download</button>
+    <button class="linkedin-btn linkedin-primary">Apply on company website</button>
+    <button class="linkedin-btn linkedin-secondary">Save</button>
+  </div>
+</body>
+</html>
